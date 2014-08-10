@@ -47,8 +47,9 @@ Description: <textarea name="comment" rows="5" cols="40"> </textarea>
 <table>
 	<?php
 		error_reporting(0);
-		mysql_connect("localhost","root","mysql") or die("Error:".mysqlerror());
-		mysql_select_db("os");
+		require_once 'config.php';
+		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
+		mysql_select_db(DB_DATABASE);
 		$comment = mysql_real_escape_string($comment);
 		mysql_query("INSERT INTO tip(tip_keyword,tip_description) VALUES('$keyword','$comment')");
 		mysql_close($con);

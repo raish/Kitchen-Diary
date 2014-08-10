@@ -5,8 +5,8 @@ session_start();
 require_once 'config.php';
 $errmsg_arr = array();
 $errflag = false;
-$conn = mysql_connect('localhost', 'root', 'mysql');
-mysql_select_db('os', $conn);
+$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+mysql_select_db(DB_DATABASE, $conn);
 
 // username and password sent from form 
 $username=$_POST['username']; 

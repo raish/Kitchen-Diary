@@ -5,8 +5,9 @@
 	<?php
 		session_start();
 		error_reporting(0);
-		mysql_connect("localhost","root","mysql") or die("Error:".mysqlerror());
-		mysql_select_db("os");
+		require_once 'config.php';
+		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
+		mysql_select_db(DB_DATABASE);
 		echo "<table>";
 		$username = "user1";
 		$recipename=$_GET['recipename'];

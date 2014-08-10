@@ -56,7 +56,7 @@
 		{
 			var iframeobj = document.getElementById("kitchenframe");
 			//alert(iframeobj);
-			iframeobj.src= "share	.php";
+			iframeobj.src= "share.php";
 			iframeobj.height = "200";
 			iframeobj.width = "350";
 		}
@@ -102,9 +102,10 @@
 			<div id="pages">
 	<?php 
 		session_start();
+		require_once 'config.php';
 		error_reporting(0);
-		mysql_connect("localhost","root","mysql") or die("Error:".mysqlerror());
-		mysql_select_db("os");
+		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
+		mysql_select_db(DB_DATABASE);
 		$username = $_SESSION['sess_username'];
 		$result = mysql_query("SELECT * FROM recipe WHERE user_id ='$username'");
 		if(mysql_num_rows($result) != 0) // User not found. So, redirect to login_form again.

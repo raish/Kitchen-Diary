@@ -39,8 +39,9 @@ function test_input($data) {
 <table>
 	<?php
 		error_reporting(0);
-		mysql_connect("localhost","root","mysql") or die("Error:".mysqlerror());
-		mysql_select_db("os");
+		require_once 'config.php';
+		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
+		mysql_select_db(DB_DATABASE);
 		$search = mysql_real_escape_string($search);
 		$result = mysql_query("SELECT * FROM recipe WHERE recipe_name = '$search' ");
 		if(mysql_num_rows($result) == 0) // User not found. So, redirect to login_form again.
