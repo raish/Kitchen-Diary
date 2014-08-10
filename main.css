@@ -1,0 +1,116 @@
+body, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: bookman old style;
+	font-size: 10pt;
+}
+
+h1 {
+	text-align: left;
+	border-bottom: 2px solid #000000;
+	margin-bottom: 10px;
+}
+
+#book {
+	background: url("book.png") no-repeat;
+	position: absolute;
+	width: 700px;
+	height: 400px;
+	left: 1000px;
+	top: 150px;
+	margin-left: -390px;
+	margin-top: 0px;
+}
+#pages section {
+	background: url("paper.png") no-repeat;
+	display: block;
+	width: 350px;
+	height: 380px;
+	position: absolute;
+	left: 350px;
+	top: 10px;
+	overflow: hidden;
+}
+	#pages section>div {
+		display: block;
+		width: 350px;
+		height: 380px;
+		font-size: 12px;
+	}
+	#pages section p,
+	#pages section h2 {
+		padding: 3px 35px;
+		line-height: 1.4em;
+		text-align: justify;
+	}
+	#pages section h2{
+		margin: 15px 0 10px;
+	}
+
+#pageflip-canvas {
+	position: absolute;
+	z-index: 100;
+}
+
+
+	
+	ul#navmenu, ul.sub1 {
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		position: relative;		
+		}
+		
+	ul#navmenu li {
+		font-size: 15pt;
+		width: 155px;
+		text-align: center;
+		position: relative;
+		float: left;
+		margin-right: 5px;
+		}
+		
+	ul#navmenu a {
+		
+		text-decoration: none;
+		display: block;
+		width: 160px;
+		height: 25px;
+		line-height: 25px;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		border-radius: 5px;
+		}
+	
+	ul#navmenu .sub1 a {
+		margin-top : 3px;		
+		}
+		
+	ul#navmenu li:hover > a {
+		background-color: #CFC;
+		}
+		
+	ul#navmenu ul.sub1 {
+		display: none;
+		position: absolute;
+		top: 26px;
+		left: 0px
+		}
+		
+	ul#navmenu li:hover .sub1 {
+		display: block;
+		}	
+		
+	.darrow {
+		font-size: 10pt;
+		position: absolute;
+		top: 1px;
+		right: 4px;
+		}
+		
+	div.tabContent.hide { 
+		display: none; 
+		}
