@@ -1,4 +1,4 @@
 Kitchen-Diary
 =============
 
-Kitchen Diary is a web application which allows users to add and search recipes/tips and connect to friends via social network and browse through their recipe book.
+Kitchen Diary is a web application that allows users to create a recipe book along with the features to add/share/view recipes and cooking tips. The application also allows users to connect to friends and family via social media.
