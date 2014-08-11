@@ -29,6 +29,10 @@
 		echo $row['recipe_desc']; 
 		mysql_close($con);
 	?>
+	</br></br>
+	<form action="main_login.php" align=right>
+		<input type="submit" name="submit" value="OK" onclick="window.close()">
+	</form>
 </body>
 </html>
 
