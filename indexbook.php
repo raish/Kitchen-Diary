@@ -139,11 +139,19 @@
 		<iframe style ="position:absolute; right: 800px; top: 150px;" id="kitchenframe" height="500px" width="500px" frameborder ="0" src="">
 			<p>Your browser does not support iframes.</p>
 		</iframe>
+		<?php
+			function Logoutfunc()
+			{
+				echo "Logging out";
+			}
+		?>
+		<form action="main_login.php" align=right>
+			<input type="submit" value="Log Out">
+		</form>
 		<div style ="position:absolute; left: 1100px; top: 600px;">
 		<button type="button" id="button-prev1" onclick="javascript:BackPage();">Previous</button>
 		<button type="button" id="button-next1" onclick="javascript:FrontPage();">Next</button>
 		</div>
-			
 		<script type="text/javascript" src="pageflip.js"></script>
 	</body>	
 <html>
