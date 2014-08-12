@@ -1,0 +1,27 @@
+create table users(
+	user_id int NOT NULL auto_increment,
+    username varchar(50) NOT NULL,
+    password varchar(50) NOT NULL,
+    PRIMARY KEY(uid),
+    unique(username));
+	
+create table ingredients(
+	ingredient_id int auto_increment,
+    ingredient_name char(50),
+    ingredient_quantity text,
+    recipe_id int,
+    primary key(ingredient_id));
+
+create table recipe(
+    recipe_id int auto_increment,
+    recipe_name varchar(25),
+    recipe_desc text,
+    shared  char(1),
+    username varchar(50),
+    primary key(recipe_id));
+
+create table tip(
+    tip_id int auto_increment,
+    tip_keyword text,
+    tip_description text,
+    primary key(tip_id));
