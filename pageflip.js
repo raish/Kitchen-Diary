@@ -1,5 +1,3 @@
-
-
 (function() {
 	
 	//alert("iframe called");
@@ -186,7 +184,7 @@
 		context.lineTo(foldX - foldWidth, PAGE_HEIGHT);
 		context.lineTo(foldX - foldWidth - leftShadowWidth, PAGE_HEIGHT);
 		context.fill();
-		
+	
 		
 		// Gradient applied to the folded paper (highlights & shadows)
 		var foldGradient = context.createLinearGradient(foldX - paperShadowWidth, 0, foldX, 0);
