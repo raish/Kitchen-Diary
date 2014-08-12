@@ -1,18 +1,3 @@
-<!-- ********************************************************************************************
- * Copyright (C) 2014 Shoma Rai
- *
- * This program is free software: you can redistribute it and/or modify it under 
- * the terms of the GNU General Public License as published by the Free Software Foundation, 
- * either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
- * See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with this program. 
- * If not, see http://www.gnu.org/licenses/.
- *
- *  ******************************************************************************************/ -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -89,16 +74,20 @@
 					<li><a href="#">Recipes</a><span class="darrow">&#9660;</span>
 						<ul class="sub1">
 							<li id ="li_addrectab" onclick="tab('addrectab')">
+								<!--<a href="#" onClick="window.open('add_recipe.php','addrecipe','resizable,height=650,width=500');return false;">Add Recipe</a>-->
 								<a href="#" onClick="LoadAddRecipe()">Add Recipe</a>
 							</li>
 							<li id ="li_srchtab" onclick="tab('srchtab')">
+							<!--<a href="#" onClick="window.open('search_recipe.php','searchrecipe','resizable,height=650,width=500');return false;">Search Recipe</a></li>-->
 							<a href="#" onClick="LoadSearchRecipe()">Search Recipe</a></li>
 						</ul>	
 					</li>
 					<li><a href="#">Cooking Tips</a><span class="darrow">&#9660;</span>
 						<ul class="sub1">
 						<li id ="li_addtiptab" onclick="tab('addtiptab')">
+						<!--<a href="#" onClick="window.open('add_tip.php','addtip','resizable,height=300,width=500');return false;">Add Tip</a></li>-->
 						<a href="#" onClick="LoadAddTip()">Add Tip</a></li>
+						<!--<li id ="li_srchtiptab" onclick="tab('srchtiptab')"><a href="#" onClick="window.open('search_tip.php','searchtip','resizable,height=300,width=500');return false;">Search Tip</a></li>-->
 						<li id ="li_srchtiptab" onclick="tab('srchtiptab')"><a href="#" onClick="LoadSearchTip()">Search Tip</a></li>
 						</ul>	
 					</li>
@@ -111,40 +100,40 @@
 		<div id="book">
 			<canvas id="pageflip-canvas"></canvas>
 			<div id="pages">
-				<?php 
-					session_start();
-					require_once 'config.php';
-					error_reporting(0);
-					mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
-					mysql_select_db(DB_DATABASE);
-					$username = $_SESSION['sess_username'];
-					$result = mysql_query("SELECT * FROM recipe WHERE username ='$username'");
-					if(mysql_num_rows($result) != 0) // User not found.
+	<?php 
+		session_start();
+		require_once 'config.php';
+		error_reporting(0);
+		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
+		mysql_select_db(DB_DATABASE);
+		$username = $_SESSION['sess_username'];
+		$result = mysql_query("SELECT * FROM recipe WHERE username ='$username'");
+		if(mysql_num_rows($result) != 0) // User not found. So, redirect to login_form again.
+		{
+			while ($row = mysql_fetch_array($result))
+			{ 
+				echo "<section>";
+				echo "<div>";
+				$recipe_id = $row['recipe_id'];	
+				echo "<h2><i>".$row['recipe_name']."</i></h2>";
+				$result1 = mysql_query("SELECT ingredient_name,ingredient_quantity FROM ingredients WHERE recipe_id = '$recipe_id' ");
+				if(mysql_num_rows($result1) != 0) 
+				{
+					echo "<p><b>Ingredients</b></br>";
+					while ($row1 = mysql_fetch_array($result1))
 					{
-						while ($row = mysql_fetch_array($result))
-						{ 
-							echo "<section>";
-							echo "<div>";
-							$recipe_id = $row['recipe_id'];	
-							echo "<h2><i>".$row['recipe_name']."</i></h2>";
-							$result1 = mysql_query("SELECT ingredient_name,ingredient_quantity FROM ingredients WHERE recipe_id = '$recipe_id' ");
-							if(mysql_num_rows($result1) != 0) 
-							{
-								echo "<p><b>Ingredients</b></br>";
-								while ($row1 = mysql_fetch_array($result1))
-								{
-									echo $row1['ingredient_name'].":".$row1['ingredient_quantity']."</br>";
-								}	
-								echo "</p>";
-								echo "<p><b>Preparation</b></br>";
-								echo $row['recipe_desc']."</br>";
-							}
-							echo "</div>";
-							echo "</section>";
-								
-						} 
-					}
-				?>
+						echo $row1['ingredient_name'].":".$row1['ingredient_quantity']."</br>";
+					}	
+					echo "</p>";
+					echo "<p><b>Preparation</b></br>";
+					echo $row['recipe_desc']."</br>";
+				}
+				echo "</div>";
+				echo "</section>";
+					
+			} 
+		}
+	?>
 			</div>
 		</div>
 		<iframe style ="position:absolute; right: 800px; top: 130px;" id="kitchenframe" height="500px" width="500px" frameborder ="0" src="">
@@ -160,8 +149,8 @@
 			<input type="submit" value="Log Out">
 		</form>
 		<div style ="position:absolute; left: 1100px; top: 600px;">
-			<button type="button" id="button-prev1" onclick="javascript:BackPage();">Previous</button>
-			<button type="button" id="button-next1" onclick="javascript:FrontPage();">Next</button>
+		<button type="button" id="button-prev1" onclick="javascript:BackPage();">Previous</button>
+		<button type="button" id="button-next1" onclick="javascript:FrontPage();">Next</button>
 		</div>
 		<script type="text/javascript" src="pageflip.js"></script>
 	</body>	
