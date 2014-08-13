@@ -63,19 +63,11 @@ Link :  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
 Source Code:
 =========
 The source code can be found at:https://github.com/raish/Kitchen-Diary
-<<<<<<< HEAD
 
 Run:
 =========
 Instructions to run the application is present at: https://github.com/raish/Kitchen-Diary/blob/master/BuildInstallation.txt
 
-=======
-
-Run:
-=========
-Instructions to run the application is present at: https://github.com/raish/Kitchen-Diary/blob/master/BuildInstallation.txt
-
->>>>>>> c1e11a4472dece1c3fc0e8c083f15216276b1ecb
 User Manual:
 =========
 User Manual is located at:https://github.com/raish/Kitchen-Diary/blob/master/UserManual.pdf
