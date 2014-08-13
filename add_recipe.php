@@ -126,7 +126,7 @@ Share Publicly? <input type="radio" name="share" value="y">Yes
 		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
 		mysql_select_db(DB_DATABASE);
 		$username = $_SESSION['sess_username'];
-		$result = mysql_query("SELECT MAX(recipe_id) as max_recipe_id FROM recipe WHERE user_id = '$username' ");
+		$result = mysql_query("SELECT MAX(recipe_id) as max_recipe_id FROM recipe WHERE username = '$username' ");
 		$row = mysql_fetch_array($result);
 		$max_row = $row['max_recipe_id']+1;
 		$recipename = mysql_real_escape_string($recipename);
@@ -137,7 +137,7 @@ Share Publicly? <input type="radio" name="share" value="y">Yes
 		$n = count($pieces);
 		if($n > 0 && $recipename != "")
 		{		
-			mysql_query("INSERT INTO recipe(recipe_name,recipe_desc,shared,user_id) VALUES('$recipename','$method','$share','$username')");
+			mysql_query("INSERT INTO recipe(recipe_name,recipe_desc,shared,username) VALUES('$recipename','$method','$share','$username')");
 			for ($i=0;$i<$n;$i=$i+2)
 			{
 				$j=$i+1;

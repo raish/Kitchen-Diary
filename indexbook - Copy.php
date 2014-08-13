@@ -91,7 +91,8 @@
 						<li id ="li_srchtiptab" onclick="tab('srchtiptab')"><a href="#" onClick="LoadSearchTip()">Search Tip</a></li>
 						</ul>	
 					</li>
-					<li id ="li_askfriend" onclick="tab('askfriend')"><a href="#" onClick="LoadShare()">Social</a></li>
+					<li id ="li_askfriend" onclick="tab('askfriend')">
+					<a href="#" onClick="LoadShare()">Social</a></li>
 				</ul></br>
 			</div>
 			<div id="Content_Area"></div>
@@ -114,8 +115,7 @@
 				echo "<section>";
 				echo "<div>";
 				$recipe_id = $row['recipe_id'];	
-				echo "<h2><i><u>".$row['recipe_name']."</u></i></h2>";
-				//echo "<img src='page_img.png' alt=".$row['recipe_name'].">";
+				echo "<h2><i>".$row['recipe_name']."</i></h2>";
 				$result1 = mysql_query("SELECT ingredient_name,ingredient_quantity FROM ingredients WHERE recipe_id = '$recipe_id' ");
 				if(mysql_num_rows($result1) != 0) 
 				{
@@ -145,9 +145,9 @@
 				echo "Logging out";
 			}
 		?>
-		<div style ="position:absolute; left: 20px; top: 100px;">
-			<form action="main_login.php" stylealign=left><input type="submit" value="Log Out"></form>
-		</div>		
+		<form action="main_login.php" align=right>
+			<input type="submit" value="Log Out">
+		</form>
 		<div style ="position:absolute; left: 600px; top: 600px;">
 		<button type="button" id="button-prev1" onclick="javascript:BackPage();">Previous</button>
 		<button type="button" id="button-next1" onclick="javascript:FrontPage();">Next</button>

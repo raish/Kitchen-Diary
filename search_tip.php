@@ -54,7 +54,7 @@ function test_input($data) {
 			while ($row = mysql_fetch_array($result))
 			{?>
 				<tr>
-					<td><?php echo $row['tip_description'];?></td>
+					<td><h3><i><?php echo $row['tip_description'];?></i></h3></td>
 				</tr>
 			<?php }
 		}

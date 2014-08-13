@@ -19,7 +19,7 @@ Kitchen Diary
  Following is the link for the repository: https://github.com/raish/Kitchen-Diary
  
  Please, see the file license in this distribution for license terms. Link is
- https://github.com/raish/Kitchen-Diary/blob/master/LICENSE.md
+ https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
  
  References:
  
