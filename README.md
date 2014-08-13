@@ -35,38 +35,38 @@ Kitchen Diary
  email: shomarai@pdx.edu
  
 **********************************************************************
-Name:
+Name
 ======
 Shoma Rai
 
-Project Name:
+Project Name
 ============
 Kitchen Diary
 
-Contact Information:
+Contact Information
 =================
 shomarai@pdx.edu
 
-Project Description:
+Project Description
 ================
 Kitchen Diary is a web application that allows users to create a recipe book along with the features to 
 add/share/view recipes and cooking tips. The application also allows users to connect to friends and family via social media.
 
 The application was developed using HTML,PHP-MySQL and JavaScript. Wamp Server was used for the development.
 
-License Information:
+License Information
 ================
 Please check the below link to get the file license in this distribution.
 Link :  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
 
-Source Code:
+Source Code
 =========
 The source code can be found at:https://github.com/raish/Kitchen-Diary
 
-Run:
+Run
 =========
 Instructions to run the application is present at: https://github.com/raish/Kitchen-Diary/blob/master/BuildInstallation.txt
 
-User Manual:
+User Manual
 =========
 User Manual is located at:https://github.com/raish/Kitchen-Diary/blob/master/UserManual.pdf
