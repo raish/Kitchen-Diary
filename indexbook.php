@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+/* Copyright (C) 2014 Shoma Rai 
+ This program is free software.you can redistribute it or modify it under the terms of the GNU General Public License as published by the Free Software */
+ ?>
 <html>
     <head>
 		<title>Kitchen Diary</title>
@@ -107,7 +110,7 @@
 		mysql_select_db(DB_DATABASE);
 		$username = $_SESSION['sess_username'];
 		$result = mysql_query("SELECT * FROM recipe WHERE username ='$username'");
-		if(mysql_num_rows($result) != 0) // User not found. So, redirect to login_form again.
+		if(mysql_num_rows($result) != 0) // User not found.
 		{
 			while ($row = mysql_fetch_array($result))
 			{ 

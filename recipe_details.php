@@ -24,7 +24,7 @@
 			mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
 			mysql_select_db(DB_DATABASE);
 			echo "<table>";
-			$username = "user1";
+			$username = $_SESSION['sess_username'];
 			$recipename=$_GET['recipename'];
 			echo "<p align=center><i> <font face=Bookman Old style size='16pt'>$recipename</font></i></p>";
 			$result = mysql_query("SELECT * FROM recipe WHERE recipe_name = '$recipename' ");
