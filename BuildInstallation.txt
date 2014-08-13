@@ -1,0 +1,24 @@
+ /* Build/Install/Run the project */
+
+1. Install WampServer from the following link: 
+   http://www.wampserver.com/en/
+   WampServer is a Windows web development environment. It allows you to create web applications with Apache2, PHP and a MySQL database. 
+   Alongside, PhpMyAdmin allows you to manage easily your databases.
+
+2. To get started, clone the repository on Github in a folder into your local computer using the following commands:
+   git clone https://github.com/raish/Kitchen-Diary.git
+   A folder called Kitchen-Diary will be created in your local folder.
+ 
+3. Create the tables using MySQL.
+   Table definitions is present in : https://github.com/raish/Kitchen-Diary/blob/master/tables.txt
+   
+4. Edit the config file located at https://github.com/raish/Kitchen-Diary/blob/master/config.php
+   to refer to your database credentials.
+   
+5. Code runs in the Apache Web Browser.
+   The location of file is passed in browser with localhost.
+   http://localhost/[name of folder]/[file name]
+   For the main login screen:   http://localhost/[name of folder]/main_login.php
+
+6. Once this is done, refer to the user guide located at :https://github.com/raish/Kitchen-Diary/blob/master/UserManual.pdf
+   for step-by step navigation through the screens.
