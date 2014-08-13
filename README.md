@@ -48,7 +48,7 @@ The application was developed using HTML,PHP-MySQL and JavaScript. Wamp Server w
 License Information:
 ================
 Please check the below link to get the file license in this distribution.
-Link :  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE.md
+Link :  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
 
 Source Code:
 =========
