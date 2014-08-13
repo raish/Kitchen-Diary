@@ -26,7 +26,7 @@ Kitchen Diary
  * https://www.google.com/
  * http://www.w3schools.com/
  * http://www.html5rocks.com/en/tutorials
- * http://www.youtube.com/watch?v=TmQm-
+ * http://www.youtube.com/watch?v=T7ayE5AtRUA
  * http://www.elated.com/articles/javascript-tab
 
  Icon for Social media from: http://www.niftybuttons.com/
