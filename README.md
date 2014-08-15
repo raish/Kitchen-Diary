@@ -30,6 +30,7 @@ Kitchen Diary
  http://www.youtube.com/watch?v=TmQm-p3wCSU
  www.phpclasses.org
 
+ Images for the website:  Copyright (C) 2014 Shoma Rai
  Icon for Social media from: http://www.niftybuttons.com/
  
  Author - Shoma Rai

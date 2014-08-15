@@ -56,11 +56,15 @@
 				require_once 'config.php';
 				mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
 				mysql_select_db(DB_DATABASE);
+				$username = $_SESSION['sess_username'];
 				$search = mysql_real_escape_string($search);
-				$result = mysql_query("SELECT * FROM recipe WHERE recipe_name = '$search' ");
+				$result = mysql_query("SELECT * FROM recipe WHERE recipe_name = '$search' and shared = 'y' or username = '$username'");
 				if(mysql_num_rows($result) == 0) // User not found.
 				{
-					//echo 'None of the tips are related to your keyword';
+					if ($search != "")
+					{
+						echo 'None of the recipes are related to your keyword';
+					}
 				}
 				else
 				{

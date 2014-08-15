@@ -141,7 +141,8 @@ Share Publicly? <input type="radio" name="share" value="y">Yes
 		mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Error:".mysqlerror());
 		mysql_select_db(DB_DATABASE);
 		$username = $_SESSION['sess_username'];
-		$result = mysql_query("SELECT MAX(recipe_id) as max_recipe_id FROM recipe WHERE username = '$username' ");
+		//$result = mysql_query("SELECT MAX(recipe_id) as max_recipe_id FROM recipe WHERE username = '$username' ");
+		$result = mysql_query("SELECT MAX(recipe_id) as max_recipe_id FROM recipe");
 		$row = mysql_fetch_array($result);
 		$max_row = $row['max_recipe_id']+1;
 		$recipename = mysql_real_escape_string($recipename);
