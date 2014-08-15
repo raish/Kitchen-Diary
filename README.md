@@ -22,9 +22,9 @@ Kitchen Diary
  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
  
  References:
- http://stackoverflow.com/
- https://www.google.com/
- http://www.w3schools.com/
+ http://stackoverflow.com
+ https://www.google.com
+ http://www.w3schools.com
  http://www.elated.com/articles/javascript-tabs
  http://www.html5rocks.com/en/tutorials
  http://www.youtube.com/watch?v=TmQm-p3wCSU
