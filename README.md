@@ -22,8 +22,7 @@ Kitchen Diary
  https://github.com/raish/Kitchen-Diary/blob/master/LICENSE
  
  References:
- http://stackoverflow.com
- https://www.google.com
+ http://stackoverflow.com                                                                                                 https://www.google.com
  http://www.w3schools.com
  http://www.elated.com/articles/javascript-tabs
  http://www.html5rocks.com/en/tutorials
@@ -73,3 +72,5 @@ Instructions to run the application is present at: https://github.com/raish/Kitc
 User Manual:
 =========
 User Manual is located at:https://github.com/raish/Kitchen-Diary/blob/master/UserManual.pdf
+
+Presentation:https://github.com/raish/Kitchen-Diary/blob/master/Kitchen_Diary.pdf
