@@ -34,8 +34,7 @@ Kitchen Diary
  Icon for Social media from: http://www.niftybuttons.com/
  
  Author - Shoma Rai
- email: shomarai@pdx.edu
- 
+
 **********************************************************************
 Name:
 ======
@@ -44,10 +43,6 @@ Shoma Rai
 Project Name:
 ============
 Kitchen Diary
-
-Contact Information:
-=================
-shomarai@pdx.edu
 
 Project Description:
 ================
