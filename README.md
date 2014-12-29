@@ -1,8 +1,6 @@
 Kitchen Diary
 =============
 
- Copyright (C) 2014 Shoma Rai
-
  Kitchen Diary is a web application that allows users to create a recipe book along with the features to add/share/view recipes and cooking tips. The application also allows users to  connect to friends and family via social media.
 
  This program is free software: you can redistribute it and/or modify it under the terms of the 
@@ -33,13 +31,7 @@ Kitchen Diary
  
  Icon for Social media from: http://www.niftybuttons.com/
  
- Author - Shoma Rai
-
 **********************************************************************
-Name:
-======
-Shoma Rai
-
 Project Name:
 ============
 Kitchen Diary
